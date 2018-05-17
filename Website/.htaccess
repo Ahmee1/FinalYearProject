@@ -1,0 +1,13 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule    ^index/?$    index.php    [NC,L]
+RewriteRule    ^history/?$    history.php    [NC,L]
+RewriteRule    ^location/?$    location.php    [NC,L]
+RewriteRule    ^404/?$    404.php    [NC,L]
+RewriteRule    ^admin/?$    admin/login.php    [NC,L]
+
+<Files "config.ini">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+ErrorDocument 404 /404
